@@ -1,0 +1,26 @@
+#header {
+  width: 100vw;
+  padding: 1rem;
+  background-color: #00bfa5;
+  font-size: 1.5rem;
+}
+#header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header nav .nav-link:hover {
+  cursor: pointer;
+}
+#header nav .icon {
+  opacity: 70%;
+  transition: 0.5s ease-in-out;
+}
+#header nav .icon:hover {
+  opacity: 100%;
+}
+#header nav #user {
+  height: 3.4rem;
+}
+
+/*# sourceMappingURL=output.css.map */

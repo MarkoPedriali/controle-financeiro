@@ -1,0 +1,6 @@
+@mixin main-font($main-font: 'Lato', $color: rgba(255, 255, 255, 0.947), $f-wght: 100) {
+    font-family: $main-font;
+    color: $color;
+    font-size: 1.2rem;
+    font-weight: $f-wght;
+};
