@@ -9,7 +9,7 @@ function Header() {
             <nav>
                 <img src={menu} className="nav-link icon" id="menu" alt="menu icon"></img>
                 <h1 className="nav-link">Controle Financeiro</h1>
-                <img src={user} className="nav-link icon" id="menu" alt="user login icon"></img>
+                <img src={user} className="nav-link icon" id="user" alt="user login icon"></img>
             </nav>
         </header>
         </div>

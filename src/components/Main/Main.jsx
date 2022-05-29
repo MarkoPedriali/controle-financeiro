@@ -5,7 +5,7 @@ function Main(){
         <main id="main">
             <div className="transacao">
                 <form>
-                    <label for="tipo"><h2>Tipo de transação</h2></label>
+                    <label for="tipo"><h4>Tipo de transação</h4></label>
                     <select name="tipo" className="inputs">
                         <option value="compra" className="options">Comprar</option>
                         <option value="venda" className="options">Vender</option>
