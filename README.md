@@ -1,6 +1,7 @@
 CONTROLE FINANCEIRO
 
 [SOBRE]
+
 Esta aplicação foi projetada para simular uma single page application de saldo financeiro, onde, o usuário definiria o tipo de transação financiera(compra ou venda), o nome do produto e o valor da transação a ser tratada. Ao submeter as entradas, são mostradas as transações realizadas e o saldo final, se positivo ou negativo.
 Esta aplicação simula sites de e-commerce, transações bancárias e afins. 
 
@@ -22,6 +23,6 @@ Esta aplicação está disponível apenas para ser executada diretamente no comp
 
 -Abrir o repositório baixado no editor/IDE de sua preferência. 
 
--Instalar o pacote NodeModules diretamente na raiz do projeto com o comando:  npm install
+-Instalar as dependências do projeto diretamente na raiz do projeto com o comando:  npm install
 
 -Para abrir a aplicação, digitar no terminal o script > npm start
