@@ -1,10 +1,14 @@
-
+import './output.css';
 
 function Item(props){
-    console.log(props)
     return(
-        <li>{props.nome}</li>
-    );
+        <>
+            <li className={`item-list ${props.tipo}`}>
+                <h4>{`-${props.nome}`}</h4>
+                <h4>{'R$ '+props.valor+',00'}</h4>
+            </li>
+        </>
+    )
 }
 
 export default Item;

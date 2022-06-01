@@ -8,7 +8,6 @@ function Main(){
     const[nome, setNome] = useState('');
     const[valor, setValor] = useState('');
     var [sacola, setSacola] = useState([]);
-    console.log(sacola);
 
     const handleReset = () => {
         Array.from(document.querySelectorAll("input")).forEach(
@@ -26,8 +25,8 @@ function Main(){
         }
         sacola.push(item);
         setSacola(sacola);
-        handleReset();
 
+        handleReset();
         extrato(item);
     };
 
@@ -42,35 +41,41 @@ function Main(){
         <main id="main">
             <div className="transacao">
                 <form id="forms" onSubmit={handleSubmit}>
-                    <label for="tipo"><h4>Tipo de transação</h4></label>
+                    <label htmlFor="tipo"><h4>Tipo de transação</h4></label>
                     <select name="tipo" className="inputs" onChange={e => setTipo(e.target.value)} required>
-                        <option selected value="compra" className="options">Comprar</option>
+                        <option value="compra" className="options">Comprar</option>
                         <option value="venda" className="options">Vender</option>
                     </select>
-                    <label for="produto"><h4>Nome da mercadoria</h4></label>
+                    <label htmlFor="produto"><h4>Nome da mercadoria</h4></label>
                     <input type="text" name="produto" className="inputs" onChange={e => setNome(e.target.value)} required ></input>
-                    <label for="valor"><h4>Valor</h4></label>
-                    <input type="number" className="inputs" onChange={e => setValor(e.target.value)} required></input>
+                    <label htmlFor="valor"><h4>Valor</h4></label>
+                    <input type="number" className="inputs" onChange={e => setValor(e.target.value)} min="0" required></input>
                     <button type="submit">ADICIONAR</button>
                 </form>
             </div>
             <div className="extrato">
                 <h2>Extrato das transações</h2>
-                <div className="lista-produtos">                
+                <div className="lista-wrapper">                
                         {                            
                             sacola.length > 0 ? (
-                                <ul>
+                                <ul className="lista-produtos">
                                     {
-                                        sacola.map((i) => (                                            
-                                            <Item nome={i.nome}/>
+                                        sacola.map((i,index) => (                                            
+                                            <Item nome={i.nome} valor={i.valor} tipo={i.tipo} key={index}/>
                                         ))
                                     }                                   
                                 </ul>
                             ) : 
-                            (<p>Não há produtos na sacola</p> )
+                            (<h3 className='sacola-vazia'>Não há produtos na sacola</h3> )
                         }                                        
                 </div>
-                <h2 id="total">{saldo}</h2>
+                <div className="saldo">
+                    <h2>Total:</h2>
+                    {saldo < 0 ? (
+                        <h2 className="total negativo">{saldo}</h2>
+                        ) : (<h2 className="total positivo">{saldo}</h2>)
+                    }
+                </div>
             </div>
         </main>
     );

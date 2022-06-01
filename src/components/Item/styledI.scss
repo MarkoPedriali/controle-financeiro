@@ -1,0 +1,19 @@
+@use '../../global.scss';
+
+.item-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include global.main-font($f-size: larger)
+}
+
+.venda{
+    color: rgba(0, 128, 0, 0.873);
+}
+
+.compra{
+    color: rgba(255, 0, 0, 0.885);
+}
+

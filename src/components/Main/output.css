@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  font-family: "Lato";
+  font-family: "Roboto";
   color: rgb(70, 68, 68);
   font-size: 1.2rem;
   font-weight: 100;
@@ -38,10 +38,32 @@
 #main .extrato h2 {
   font-size: 2rem;
 }
-#main .extrato .lista-produtos {
+#main .extrato .lista-wrapper {
   margin-top: 0.5rem;
 }
-#main .extrato #total {
+#main .extrato .lista-wrapper .lista-produtos {
+  margin: 0.6rem 0;
+}
+#main .extrato .lista-wrapper .sacola-vazia {
+  margin: 0.6rem 0;
+  font-family: "Roboto";
+  color: rgb(70, 68, 68);
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+#main .extrato .saldo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#main .extrato .saldo .negativo {
+  color: rgba(255, 0, 0, 0.84);
+}
+#main .extrato .saldo .positivo {
+  color: rgba(0, 128, 0, 0.875);
+}
+#main .extrato .total {
   margin-top: 1rem;
 }
 

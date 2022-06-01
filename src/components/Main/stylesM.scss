@@ -42,12 +42,36 @@
             font-size: 2rem;
         }
 
-        .lista-produtos{
+        .lista-wrapper{
             margin-top: 0.5rem;
+
+            .lista-produtos{
+                margin: 0.6rem 0;
+            }
+
+            .sacola-vazia{
+                margin: 0.6rem 0;
+                @include global.main-font($color: rgb(70, 68, 68));
+            }
         }
 
-        #total{
+        .saldo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .negativo{
+                color: rgba(255, 0, 0, 0.84);
+            }
+            .positivo{
+                color: rgba(0, 128, 0, 0.875);
+            }
+        }
+
+        .total{
             margin-top: 1rem;
+
         }
     }
 

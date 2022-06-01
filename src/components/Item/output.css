@@ -1,0 +1,21 @@
+.item-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto";
+  color: rgba(255, 255, 255, 0.947);
+  font-size: larger;
+  font-weight: 100;
+}
+
+.venda {
+  color: rgba(0, 128, 0, 0.873);
+}
+
+.compra {
+  color: rgba(255, 0, 0, 0.885);
+}
+
+/*# sourceMappingURL=output.css.map */

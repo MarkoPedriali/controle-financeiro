@@ -27,4 +27,10 @@
   height: 3.2rem;
 }
 
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.6rem;
+  }
+}
+
 /*# sourceMappingURL=output.css.map */

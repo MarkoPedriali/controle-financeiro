@@ -8,7 +8,7 @@ function Header() {
         <header id="header">
             <nav>
                 <img src={menu} className="nav-link icon" id="menu" alt="menu icon"></img>
-                <h1 className="nav-link">Controle Financeiro</h1>
+                <h1 className="nav-link logo">Controle Financeiro</h1>
                 <img src={user} className="nav-link icon" id="user" alt="user login icon"></img>
             </nav>
         </header>
