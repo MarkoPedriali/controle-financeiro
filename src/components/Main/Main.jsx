@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import './output.css';
+import Item from '../Item/Item';
 
 function Main(){   
-    var[saldo,setSaldo] = useState(0);
+    var[saldo,setSaldo] = useState('');
     const[tipo, setTipo] = useState('compra');
     const[nome, setNome] = useState('');
     const[valor, setValor] = useState('');
+    var [sacola, setSacola] = useState([]);
+    console.log(sacola);
 
     const handleReset = () => {
         Array.from(document.querySelectorAll("input")).forEach(
@@ -13,7 +16,7 @@ function Main(){
         );
     }
 
-    const handleSubmit = async e => {
+    const handleSubmit =  e => {
         e.preventDefault();
 
         var item = {
@@ -21,7 +24,8 @@ function Main(){
             "nome":nome,
             "valor":valor
         }
-       
+        sacola.push(item);
+        setSacola(sacola);
         handleReset();
 
         extrato(item);
@@ -32,8 +36,6 @@ function Main(){
         var valor = parseFloat(item.valor);
         
         tipo === "venda" ? setSaldo(saldo += valor) : setSaldo(saldo -= valor);
-        
-        console.log(saldo);
     }
 
     return(
@@ -54,12 +56,21 @@ function Main(){
             </div>
             <div className="extrato">
                 <h2>Extrato das transações</h2>
-                <div className="lista-produtos">
-                    <p>produto</p>
-                    <p>produto</p>
-                    <p>produto</p>
+                <div className="lista-produtos">                
+                        {                            
+                            sacola.length > 0 ? (
+                                <ul>
+                                    {
+                                        sacola.map((i) => (                                            
+                                            <Item nome={i.nome}/>
+                                        ))
+                                    }                                   
+                                </ul>
+                            ) : 
+                            (<p>Não há produtos na sacola</p> )
+                        }                                        
                 </div>
-                <h2 id="total">Total</h2>
+                <h2 id="total">{saldo}</h2>
             </div>
         </main>
     );
