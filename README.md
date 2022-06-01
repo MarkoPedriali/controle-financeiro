@@ -17,7 +17,8 @@ Esta aplicação está disponível apenas para ser executada diretamente no comp
 
 - Instalar o NodeJS > link de download: https://nodejs.org/en/ || para verificar se já está instalado : node --version 
 
--Clonar este repositorio em uma pasta local / link do repositorio > 
+-Clonar este repositorio em uma pasta local / link do repositorio > git clone https://github.com/MarkoPedriali/controle-financeiro.git
+(para clonar, o git deve estar instalado na máquina)
 
 -Abrir o repositório baixado no editor/IDE de sua preferência. 
 
